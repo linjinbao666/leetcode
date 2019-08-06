@@ -1,11 +1,13 @@
 package compete;
 
+import annotation.Unused;
+
 /**
  * 泰博拉切数
  */
 public class Tribonacci {
 
-    public static int tribonacci(int n) {
+    private static int tribonacci(int n) {
         if(n==0) return 0;
         if(n==1) return 1;
         if(n==2) return 1;
@@ -21,6 +23,7 @@ public class Tribonacci {
         return array[n];
     }
 
+    @Unused("没用到")
     private static int option1(int n) {
         if(n==0) return 0;
         if(n==1) return 1;
