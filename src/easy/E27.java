@@ -1,7 +1,5 @@
 package easy;
 
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-
 /**
  * 移除元素
  * nums = [3,2,2,3], val = 3
