@@ -2,6 +2,7 @@ package medium;
 
 import sun.reflect.generics.tree.Tree;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,11 +10,17 @@ import java.util.List;
  */
 public class M94 {
     public List<Integer> inorderTraversal(TreeNode root) {
-        if (root.left!=null){
+        List list = new ArrayList();
+        helper(root,list);
+        return list;
+    }
 
+    public void helper(TreeNode root, List list){
+        if (root!=null){
+            if (root.left!=null)helper(root.left, list);
+            list.add(root.val);
+            if (root.right!=null) helper(root.right,list);
         }
-
-        return null;
     }
 }
 class TreeNode{
